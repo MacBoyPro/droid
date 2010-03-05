@@ -1,0 +1,16 @@
+#pageTitle {
+    text-align:center;
+}
+
+div#toolbar {
+    position: absolute;
+    top: 5px;
+}
+
+div#toolbar div#leftItem {
+    left: 15px;
+}
+
+div#toolbar div#rightItem {
+    right: 15px;
+}
