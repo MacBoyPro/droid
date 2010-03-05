@@ -1,5 +1,14 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial;
+    background: #ffffff;
+    color: #000000;
+}
+
 #pageTitle {
-    text-align:center;
+    padding: 50px;
+    background: #000;
+    color: #fff;
 }
 
 div#toolbar {
@@ -13,4 +22,8 @@ div#toolbar div#leftItem {
 
 div#toolbar div#rightItem {
     right: 15px;
+}
+
+div#content .list ul > li {
+    list-style-type: none;   
 }
