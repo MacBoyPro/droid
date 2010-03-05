@@ -12,18 +12,22 @@ body {
 }
 
 div#toolbar {
-    position: absolute;
-    top: 5px;
 }
 
 div#toolbar div#leftItem {
-    left: 15px;
+
 }
 
 div#toolbar div#rightItem {
-    right: 15px;
+
 }
 
-div#content .list ul > li {
-    list-style-type: none;   
+div#content div.list ul {
+    border-top: 1px solid #000;
+}
+
+div#content div.list li {
+    list-style-type: none;
+    padding: 0 0 5px 5px;
+    border-bottom: 1px solid #000;
 }
