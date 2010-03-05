@@ -1,0 +1,24 @@
+<div class="toolbar">
+	<h1 id="pageTitle">
+		<%=@todo.title%>
+	</h1>
+</div>
+
+<div class="panel" selected="true">
+
+<a class="button right_button" href="<%=url_for(:action => :edit, :id => @todo.object)%>" target="_self">Edit</a>
+
+<table class="grid">
+  
+  <tr>
+	<td class="gridleft">Title</td>
+    <td class="gridright"><%=@todo.title%></td>
+  </tr>
+  
+  <tr>
+	<td class="gridleft">Description</td>
+    <td class="gridright"><%=@todo.description%></td>
+  </tr>
+  
+</table>
+</div>

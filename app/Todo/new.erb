@@ -1,0 +1,27 @@
+<div class="toolbar">
+	<h1 id="pageTitle">
+		New Todo
+	</h1>
+</div>
+
+<form title="New Todo" 
+	  class="panel"
+	  id="todo_new_form" 
+	  method="POST" 
+	  action="<%=url_for(:action => :create)%>" selected="true">
+	<fieldset>
+		<input type="hidden" name="id" value="<%=@todo.object%>"/>
+		
+		  <div class="row">
+			  <label>Title: </label>
+			  <input type="text" name="todo[title]"/>
+		  </div>
+		
+		  <div class="row">
+			  <label>Description: </label>
+			  <input type="text" name="todo[description]"/>
+		  </div>
+		
+	</fieldset>
+	<input type="submit" value="Create"/>
+</form>

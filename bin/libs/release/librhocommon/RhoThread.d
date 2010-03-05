@@ -1,0 +1,1 @@
+platform/shared/common/RhoThread.cpp    platform/shared/common/RhoThread.h    platform/shared/common/IRhoThreadImpl.h    platform/shared/common/AutoPointer.h    platform/shared/common/IRhoClassFactory.h
