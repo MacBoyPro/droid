@@ -1,14 +1,27 @@
-<div class="toolbar">
-	<h1 id="pageTitle">
-		Todos
-	</h1>
+<div id="pageTitle">
+	<h1>Todos</h1>
 </div>
 
-<ul id="todos" title="Todos" selected="true">
-  	<a class="button right_button" href="Todo/new" target="_self">New</a>
-	<%@todos.each do |x|%>
-	
-	<li><%=link_to "#{x.title}", :action => :show, :id => x.object%></li>
-	
-	<%end%>
-</ul>
+<div id="toolbar">
+  <div id="leftItem" class="buttonItem">
+      <a href="/app/" target="_self">Home</a>
+    </div>
+    <div id="rightItem" class="buttonItem">
+      <a href="Todo/new" target="_self">New</a>
+    </div>
+</div>
+
+<div id="content">
+    <div class="list">
+        <ul class="simple_list">
+            <%@todos.each do |obj|%>
+                <li>
+                    <a href="<%= url_for(:action => :show, :id => obj.object) %>">
+                        <span class="title"><%= obj.title %></span>
+                        <span class="discloser_indicator"></span>
+                    </a>
+                </li>
+            <%end%>
+        </ul>
+    </div>
+</div>

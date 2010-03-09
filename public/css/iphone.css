@@ -88,8 +88,8 @@ div#content .list a {
     width: 100%;
 }
 
-div#content ul.simple_list li a {
-
+div#content ul.simple_list li a:hover {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(5, 140, 245)), to(rgb(1, 95, 230)));
 }
 
 div#content ul.simple_list li a span.title {
@@ -100,18 +100,28 @@ div#content ul.simple_list li a span.title {
     line-height: 75px;
 }
 
-div#content ul.simple_list li a span.discloser_indicator {
+div#content div.list ul.simple_list li a span.discloser_indicator {
+    background: url('/public/images/arrow.png') no-repeat center right;
+    height: 100%;
+    width: 20px;
     float: right;
-    margin: 0px 10px 0px 0px;
-    height: 13px;
-    width: 10px;
-    background: url(arrow.png) no-repeat;
-    position: relative;
-    top: 45%;
+    margin-right: 10px;
 }
 
 div#content ul.simple_list li a img {
     float: left;
     height: 100%;
     max-width: 100px;
+}
+
+/* Forms */
+
+div#content form fieldset {
+    border: none;    
+}
+
+div#content form button {
+    -webkit-appearance:push-button;
+    width:300px;
+    height: 40px;
 }

@@ -1,24 +1,28 @@
-<div class="toolbar">
-	<h1 id="pageTitle">
-		<%=@todo.title%>
-	</h1>
+<div id="pageTitle">
+	<h1><%=@todo.title%></h1>
 </div>
 
-<div class="panel" selected="true">
+<div id="toolbar">
+    <div id="leftItem" class="buttonItem">
+        <a href="<%= url_for( :action => :index) %>">Back</a>
+    </div>
+  <div id="rightItem" class="buttonItem">
+        <a href="<%= url_for(:action => :edit, :id => @todo.object) %>">Edit</a>
+    </div>
+</div>
 
-<a class="button right_button" href="<%=url_for(:action => :edit, :id => @todo.object)%>" target="_self">Edit</a>
+<div class="panel">
+    <table class="grid">
+      
+      <tr>
+        <td class="gridleft">Title</td>
+        <td class="gridright"><%=@todo.title%></td>
+      </tr>
 
-<table class="grid">
-  
-  <tr>
-	<td class="gridleft">Title</td>
-    <td class="gridright"><%=@todo.title%></td>
-  </tr>
-  
-  <tr>
-	<td class="gridleft">Description</td>
-    <td class="gridright"><%=@todo.description%></td>
-  </tr>
-  
-</table>
+      <tr>
+        <td class="gridleft">Description</td>
+        <td class="gridright"><%=@todo.description%></td>
+      </tr>
+
+    </table>
 </div>

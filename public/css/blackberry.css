@@ -14,14 +14,14 @@ body {
 div#toolbar {
 }
 
-div#toolbar div#leftItem {
-
+div#leftItem {
+    
 }
 
-div#toolbar div#rightItem {
+div#rightItem {
 
 }
-
+                                                                                                                                                                            
 div#content div.list ul {
     border-top: 1px solid #000;
 }

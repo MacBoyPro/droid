@@ -1,32 +1,32 @@
-<div class="toolbar">
-	<h1 id="pageTitle">
-		Edit <%=@todo.title%>
-	</h1>
+<div id="pageTitle">
+	<h1>Edit <%=@todo.title%></h1>
 </div>
 
-<form title="Edit Todo" 
-	  class="panel" 
-	  id="todo_edit_form" 
-	  method="POST" 
-	  action="<%=url_for(:action => :update)%>" selected="true">
-	<fieldset>
-		<input type="hidden" name="id" value="<%=@todo.object%>"/>
-		
-		  <div class="row">
-			  <label>Title: </label>
-			  <input type="text" name="todo[title]" value="<%=@todo.title%>"/>
-		  </div>
-		
-		  <div class="row">
-			  <label>Description: </label>
-			  <input type="text" name="todo[description]" value="<%=@todo.description%>"/>
-		  </div>
-		
-	</fieldset>
-	<input type="submit" value="Update"/>
-	<p align="center">
-		<a href="<%=url_for(:action => :delete, :id => @todo.object)%>">
-			<font color="#990000">Delete</font>
-		</a>
-	</p>
-</form>
+<div id="toolbar">
+  <div id="leftItem" class="buttonItem">
+    <a href="<%= url_for( :action => :index) %>">Cancel</a>
+  </div>
+</div>
+
+<div id="content">
+    <form title="New Todo"
+          method="POST"
+          action="<%=url_for(:action => :create)%>">
+        <fieldset>
+            <input type="hidden" name="id" value="<%=@todo.object%>"/>
+
+              <div class="row">
+                  <label>Title: </label>
+                  <input type="text" name="todo[title]" value="<%=@todo.title%>"/>
+              </div>
+
+              <div class="row">
+                  <label>Description: </label>
+                  <input type="text" name="todo[description]" value="<%=@todo.description%>"/>
+              </div>
+
+        </fieldset>
+        <button type="submit" value="<%=url_for(:action => :update, :id => @todo.object)%>">Update</button>
+        <button type="button" value="<%=url_for(:action => :delete, :id => @todo.object)%>">Delete</button>
+    </form>
+</div>

@@ -1,27 +1,31 @@
-<div class="toolbar">
-	<h1 id="pageTitle">
-		New Todo
-	</h1>
+<div id="pageTitle">
+	<h1>New <%=@todo.title%></h1>
 </div>
 
-<form title="New Todo" 
-	  class="panel"
-	  id="todo_new_form" 
-	  method="POST" 
-	  action="<%=url_for(:action => :create)%>" selected="true">
-	<fieldset>
-		<input type="hidden" name="id" value="<%=@todo.object%>"/>
-		
-		  <div class="row">
-			  <label>Title: </label>
-			  <input type="text" name="todo[title]"/>
-		  </div>
-		
-		  <div class="row">
-			  <label>Description: </label>
-			  <input type="text" name="todo[description]"/>
-		  </div>
-		
-	</fieldset>
-	<input type="submit" value="Create"/>
-</form>
+<div id="toolbar">
+  <div id="leftItem" class="buttonItem">
+    <a href="<%= url_for( :action => :index) %>">Cancel</a>
+  </div>
+</div>
+<div id="content">
+    <form title="New Todo"
+          method="POST"
+          action="<%=url_for(:action => :create)%>">
+        <fieldset>
+            <input type="hidden" name="id" value="<%=@todo.object%>"/>
+
+          <table>
+            <tr>
+              <td>Title</td>
+              <td><input type="text" name="todo[title]"/></td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td><input type="text" name="todo[description]"/></td>
+            </tr>
+          </table>
+
+        </fieldset>
+        <button type="submit">Create</button>
+    </form>
+</div>
