@@ -189,7 +189,37 @@ div#content .form_list span.label {
     -webkit-border-top-right-radius: 3px;
 }
 
-div#content .form_list input {
+div#content .form_list input.checkbox {
+    -webkit-appearance:checkbox;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+div#content .form_list input.radioButton {
+    -webkit-appearance:radio;
+    margin-top: 20px;
+    float: right;
+    margin-right: 20px;
+}
+
+div#content .form_list select {
+    width: 100px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 20px;
+    -webkit-appearance:menulist;
+}
+
+
+div#content .form_list textarea {
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div#content .form_list input.textInput {
     float: right;
     height: 40px;
     margin: 10px 10px 10px 0;

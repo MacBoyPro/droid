@@ -21,11 +21,32 @@
                 <ul>
                     <li>
                         <span class="label">Title</span>
-                        <input type="text" name="todo[title]" value="<%=@todo.title%>"/>
+                        <input type="text" name="todo[title]" class="textInput" value="<%=@todo.title%>"/>
                     </li>
                     <li>
                         <span class="label">Description</span>
-                        <input type="text" name="todo[description]" value="<%=@todo.description%>"/>
+                        <input type="text" name="todo[description]" class="textInput" value="<%=@todo.description%>"/>
+                    </li>
+                  <li>
+                        <span class="label">Checkbox</span>
+                        <input type="checkbox" name="todo[description]" class="checkbox"/>
+                    </li>
+                    <li>
+                        <span class="label">Radio Buttons</span>
+                        <input type="radio" name="todo[description]" class="radioButton"/>
+                    </li>
+                    <li>
+                        <span class="label">Drop Down</span>
+                        <select name="cars">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </li>
+                    <li>
+                        <span class="label">Text Area</span>
+                        <textarea rows="5" cols="15">The cat was playing in the garden.</textarea>
                     </li>
                 </ul>
             </div>
