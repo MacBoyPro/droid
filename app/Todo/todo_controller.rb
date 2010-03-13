@@ -36,6 +36,7 @@ class TodoController < Rho::RhoController
 
   # POST /Todo/create
   def create
+    puts "------------------------create---------------------------#{@params['todo']}"
     @todo = Todo.new(@params['todo'])
     @todo.save
     redirect :action => :index
@@ -43,6 +44,7 @@ class TodoController < Rho::RhoController
 
   # POST /Todo/{1}/update
   def update
+    puts "---------------------------update------------------------#{@params['todo']}"
     @todo = Todo.find(@params['id'])
     @todo.update_attributes(@params['todo']) if @todo
     redirect :action => :index

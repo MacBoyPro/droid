@@ -3,30 +3,34 @@
 </div>
 
 <div id="toolbar">
-  <div id="leftItem" class="buttonItem">
-    <a href="<%= url_for( :action => :index) %>">Cancel</a>
+  <div id="row">
+      <div id="leftItem" class="backButton">
+        <a href="<%= url_for( :action => :index) %>">Cancel</a>
+      </div>
+      <div id="rightItem" class="regularButton">
+        <a href="<%=url_for(:action => :delete, :id => @todo.object)%>">Delete</a>
+      </div>
   </div>
 </div>
 
 <div id="content">
-    <form title="New Todo"
-          method="POST"
-          action="<%=url_for(:action => :create)%>">
+    <form title="New Todo" id="todo_edit_form" method="POST" action="<%=url_for(:action => :update, :id => @todo.object)%>">
         <fieldset>
             <input type="hidden" name="id" value="<%=@todo.object%>"/>
-
-              <div class="row">
-                  <label>Title: </label>
-                  <input type="text" name="todo[title]" value="<%=@todo.title%>"/>
-              </div>
-
-              <div class="row">
-                  <label>Description: </label>
-                  <input type="text" name="todo[description]" value="<%=@todo.description%>"/>
-              </div>
-
+            <div class="form_list">
+                <ul>
+                    <li>
+                        <span class="label">Title</span>
+                        <input type="text" name="todo[title]" value="<%=@todo.title%>"/>
+                    </li>
+                    <li>
+                        <span class="label">Description</span>
+                        <input type="text" name="todo[description]" value="<%=@todo.description%>"/>
+                    </li>
+                </ul>
+            </div>
         </fieldset>
-        <button type="submit" value="<%=url_for(:action => :update, :id => @todo.object)%>">Update</button>
-        <button type="button" value="<%=url_for(:action => :delete, :id => @todo.object)%>">Delete</button>
+
+      <button class="updateButton" type="submit">Update</button>
     </form>
 </div>

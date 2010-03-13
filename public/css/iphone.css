@@ -16,20 +16,29 @@ h1 {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #aebbcb),color-stop(0.5, #8094ae), color-stop(1.0, #6e84a2));
 }
 
-div#toolbar div {
+div#row div {
     position: absolute;
-    top: 10px;
-    width: 50px;
     overflow: hidden;
     text-align: center;
 }
 
-div#toolbar div#leftItem {
+div#row div#leftItem {
+    top: 10px;
     left: 10px;
+    width: 50px;
 }
 
-div#toolbar div#rightItem {
+div#row div#centerItem {
+    bottom: 20px;
+    width: 300px;
+    margin-left: 10px;
+    height: 30px;
+}
+
+div#row div#rightItem {
+    top: 10px;
     right: 10px;
+    width: 50px;
 }
 
 div#toolbar a {
@@ -39,14 +48,53 @@ div#toolbar a {
     line-height: 30px;
 }
 
-div#toolbar .buttonItem {
-    width: 15%;
-    height: 30px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #6f96e9),color-stop(0.5, #3366cc), color-stop(1.0, #3366cc));
-    -webkit-border-radius: 5px;
-    overflow: hidden;
+div#row .backButton {
+    -webkit-border-bottom-left-radius: 16px 16px;
+    -webkit-border-bottom-right-radius: 6px 6px;
+    -webkit-border-image: url(/public/images/backButton.png) 0 5 0 13 stretch stretch;
+    -webkit-border-top-left-radius: 16px 16px;
+    -webkit-border-top-right-radius: 6px 6px;
+    border-width: 0px 5px 0px 13px;
+    width: auto;
     font-size: .9em;
+    z-index: 3;
+}
+
+div#row .deleteButton, .regularButton, .blueButton {
+   -webkit-border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    width: auto;
+    height: 30px;
+    font-size: .9em;
+    border-left: #5e7088 1px solid;
+    border-right: #5e7088 1px solid;
+    border-top: #34404e 1px solid;
+    border-bottom: #34404e 1px solid;
+}
+
+div#row .deleteButton {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #aebbcb),color-stop(0.5, #8094ae), color-stop(1.0, #6e84a2));
+}
+
+div#row .regularButton {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #92a4bc),color-stop(0.5, #476997), color-stop(1.0, #4e6c92));
+}
+
+div#row .blueButton {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #6f96e9),color-stop(0.5, #3366cc), color-stop(1.0, #3366cc));
     border: #1a49b3 1px solid;
+}
+
+div#content form button{
+    width:300px;
+    margin-left: 10px;
+}
+
+div#content form button.createButton {
+    position: absolute;
+    bottom: 20px;
+    height: 35px;
 }
 
 /* header */
@@ -124,4 +172,83 @@ div#content form button {
     -webkit-appearance:push-button;
     width:300px;
     height: 40px;
+}
+
+/* Forms */
+
+div#content .form_list ul {
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    background-color: white;
+    border-bottom: rgb(135, 135, 135);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(135, 135, 135);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(135, 135, 135);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(135, 135, 135);
+    border-top-style: solid;
+    border-top-width: 1px;
+    display: block;
+    font-size: 16px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 3px 9px 17px 9px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+}
+
+div#content .form_list li:first-child {
+    border:none;
+}
+
+div#content .form_list li {
+    border-top: 1px solid black;
+    display: block;
+    height: auto;
+    list-style-type: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+div#content .form_list span.label {
+    float: left;
+    display:block;
+    line-height: 43px;
+    padding-left: 5px;
+    width: auto;
+    overflow:hidden;
+}
+
+div#content .form_list input {
+    float: right;
+    height: 43px;
+    font-size:medium;
+    width: 145px;
+    -webkit-appearance: none;
+    background: transparent;
+    -webkit-border-bottom-left-radius: 0px 0px;
+    -webkit-border-bottom-right-radius: 0px 0px;
+    -webkit-border-top-left-radius: 0px 0px;
+    border: none;
+}
+
+div#content .form_list input:first-child {
+    -webkit-border-top-right-radius: 8px 8px;
+}
+
+div#content .form_list span.gridItem {
+    float: right;
+    margin-bottom: 12px;
+    margin-right: 5px;
+    margin-top: 12px;
+    text-align: left;
+    width: 145px;
 }
