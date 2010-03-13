@@ -227,7 +227,58 @@ div#content .form_list span.label {
     overflow:hidden;
 }
 
-div#content .form_list input {
+div#content .form_list input[type="checkbox"] {
+    -webkit-appearance: none;
+    background: url(/public/images/checkbox.png);
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    height: 27px;
+    width: 94px;
+}
+
+div#content .form_list input[type="checkbox"]:checked {
+    background-position-x: 0px;
+    background-position-y: 27px;
+}
+
+div#content .form_list input[type="radio"] {
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    border: none;
+    height: 40px;
+    left: 25px;
+    margin: 0px;
+    position: absolute;
+    width: 270px;
+    z-index:2000;
+}
+
+div#content .form_list input[type="radio"]:checked {
+ background: url(/public/images/radiobutton.png) no-repeat;
+ background-position-x: 100%;
+ background-position-y: 50%;
+}
+
+div#content .form_list select {
+    -webkit-appearance: none;
+    border: 0px;
+    width: 100px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 15px;
+    -webkit-appearance:menulist;
+}
+
+
+div#content .form_list textarea {
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div#content .form_list input.textInput {
     float: right;
     height: 43px;
     font-size:medium;
