@@ -117,11 +117,11 @@ div#content ul.simple_list li a span.title {
 div#content div.list ul.simple_list li a span.discloser_indicator {
     float: right;
     margin: 0px 10px 0px 0px;
-    height: 13px;
+    height: 16px;
     width: 10px;
-    background: url(/public/images/arrow.png) no-repeat;
+    background: url(/public/images/listArrow.png) no-repeat;
     position: relative;
-    top: 45%;
+    top: 35%;
 }
 
 div#content ul.simple_list li a img {
